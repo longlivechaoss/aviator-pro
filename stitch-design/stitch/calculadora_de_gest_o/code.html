@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(13, 162, 231, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .risk-gradient {
+            background: linear-gradient(90deg, #10b981 0%, #f59e0b 50%, #ef4444 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Calculadora de Gestão</h1>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Hero/Context Card -->
+<div class="p-4">
+<div class="glass-card rounded-xl overflow-hidden shadow-lg">
+<div class="h-32 w-full bg-gradient-to-br from-primary/40 to-background-dark flex items-center justify-center relative" data-alt="Abstract blue aviation themed gradient background">
+<span class="material-symbols-outlined text-6xl text-white/50">flight_takeoff</span>
+<div class="absolute bottom-4 left-4">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-widest">Aviator Pro</span>
+</div>
+</div>
+<div class="p-4">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold">Configurações de Banca</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Ajuste os valores para calcular sua entrada e limites de ganhos de forma segura.</p>
+</div>
+</div>
+</div>
+<!-- Inputs Section -->
+<div class="px-4 space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Banca Total (R$)</span>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">R$</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="1.000,00" type="text" value="1.000,00"/>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">% de Risco</span>
+<div class="relative">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500">%</span>
+<input class="w-full px-4 py-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="2" type="text" value="2"/>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Multiplicador Alvo</span>
+<div class="relative">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500">x</span>
+<input class="w-full px-4 py-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="2.00" type="text" value="2.00"/>
+</div>
+</label>
+</div>
+</div>
+<!-- Risk Gauge -->
+<div class="p-4 mt-4">
+<div class="glass-card rounded-xl p-6 flex flex-col items-center">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-widest">Nível de Risco</span>
+<div class="w-full h-4 risk-gradient rounded-full relative mb-2">
+<!-- Marker for Risk -->
+<div class="absolute top-1/2 left-[20%] -translate-y-1/2 -translate-x-1/2 w-6 h-6 bg-white rounded-full shadow-lg border-4 border-primary ring-4 ring-primary/20"></div>
+</div>
+<div class="w-full flex justify-between text-[10px] font-bold text-slate-500 uppercase px-1">
+<span>Baixo</span>
+<span>Médio</span>
+<span>Alto</span>
+</div>
+<div class="mt-4 text-center">
+<span class="text-emerald-500 font-bold text-lg">Estratégia Conservadora</span>
+<p class="text-xs text-slate-400">Risco controlado para crescimento constante.</p>
+</div>
+</div>
+</div>
+<!-- Output Cards -->
+<div class="px-4 grid grid-cols-1 gap-3 pb-8">
+<div class="flex items-center justify-between p-5 rounded-xl bg-primary/10 border border-primary/20">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Valor da Entrada</p>
+<p class="text-lg font-bold text-slate-900 dark:text-slate-100 tracking-tight">R$ 20,00</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary">info</span>
+</div>
+<div class="flex items-center justify-between p-5 rounded-xl bg-rose-500/10 border border-rose-500/20">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-rose-500 flex items-center justify-center text-white">
+<span class="material-symbols-outlined">trending_down</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Stop Loss Diário</p>
+<p class="text-lg font-bold text-rose-500 tracking-tight">R$ 100,00</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-rose-500/50">warning</span>
+</div>
+<div class="flex items-center justify-between p-5 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-emerald-500 flex items-center justify-center text-white">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Meta (Stop Win)</p>
+<p class="text-lg font-bold text-emerald-500 tracking-tight">R$ 150,00</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-emerald-500/50">verified</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 pb-6 pt-3 z-20">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-slate-400 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">show_chart</span>
+<span class="text-[10px] font-semibold uppercase tracking-wider">Sinais</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">smart_toy</span>
+<span class="text-[10px] font-semibold uppercase tracking-wider">Robôs</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<div class="bg-primary/20 p-2 rounded-xl mb-[-4px]">
+<span class="material-symbols-outlined fill-1">calculate</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider">Gestão</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">person</span>
+<span class="text-[10px] font-semibold uppercase tracking-wider">Perfil</span>
+</a>
+</div>
+</nav>
+</body></html>

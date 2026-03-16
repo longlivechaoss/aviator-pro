@@ -1,26 +1,138 @@
 @import "tailwindcss";
 
+/* ===== Aviator Pro Members - Tema ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0A0A0F;
+  --foreground: #f1f5f9;
+  /* Electric blue & cyan do stitch-design */
+  --primary: #0EA5E9;
+  --primary-glow: rgba(14, 165, 233, 0.4);
+  --accent-cyan: #06B6D4;
+  --accent-cyan-glow: rgba(6, 182, 212, 0.35);
+  --accent-green: #00FF88;
+  --accent-gold: #FFD700;
+  --accent-silver: #C0C0C0;
+  --accent-bronze: #CD7F32;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-accent-cyan: var(--accent-cyan);
+  --color-accent-green: var(--accent-green);
+  --color-accent-gold: var(--accent-gold);
+  --color-accent-silver: var(--accent-silver);
+  --color-accent-bronze: var(--accent-bronze);
+  --color-card-dark: #161B22;
+  --font-sans: var(--font-display), ui-sans-serif, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ===== Glassmorphism ===== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card-subtle {
+  background: rgba(14, 165, 233, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===== Glow neon (elementos ativos) ===== */
+.glow-primary {
+  box-shadow: 0 0 12px var(--primary-glow), 0 0 24px rgba(14, 165, 233, 0.2);
+}
+
+.glow-primary-soft {
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 12px var(--accent-cyan-glow);
+}
+
+.neon-border {
+  border: 1px solid rgba(14, 165, 233, 0.5);
+  box-shadow: inset 0 0 10px rgba(14, 165, 233, 0.2);
+}
+
+/* Barra indicadora ativa (nav) */
+.nav-glow-bar {
+  box-shadow: 0 0 12px var(--primary);
+}
+
+/* ===== Background mesh (decorativo) ===== */
+.bg-mesh {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.1) 0px, transparent 50%);
+}
+
+/* ===== Animações base ===== */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 0 0 12px var(--primary-glow);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px var(--primary-glow), 0 0 30px rgba(14, 165, 233, 0.25);
   }
 }
 
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.35s ease-out forwards;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(14, 165, 233, 0.05) 25%,
+    rgba(14, 165, 233, 0.15) 50%,
+    rgba(14, 165, 233, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* ===== Base ===== */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  min-height: 100dvh;
+}
+
+/* Safe area para notch/home indicator */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0);
 }

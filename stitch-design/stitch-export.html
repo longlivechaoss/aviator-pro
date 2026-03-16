@@ -1,0 +1,1590 @@
+<!-- Login - Aviator Pro -->
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0A0A0F",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .bg-mesh {
+            background-image: radial-gradient(at 0% 0%, rgba(13, 162, 231, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(13, 162, 231, 0.1) 0px, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex items-center justify-center p-4 bg-mesh">
+<div class="relative w-full max-w-[440px]">
+<!-- Decorative Glow -->
+<div class="absolute -top-20 -left-20 w-64 h-64 bg-primary/20 rounded-full blur-[80px]"></div>
+<div class="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+<!-- Login Card -->
+<div class="glass-card rounded-xl p-8 shadow-2xl relative z-10">
+<!-- Header/Logo Area -->
+<div class="flex flex-col items-center mb-8">
+<div class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mb-4 ring-1 ring-primary/50 shadow-[0_0_20px_rgba(13,162,231,0.3)]">
+<span class="material-symbols-outlined text-primary text-5xl">flight_takeoff</span>
+</div>
+<h2 class="text-2xl font-bold tracking-tight text-slate-100 mb-1">Aviator Pro Members</h2>
+<p class="text-slate-400 text-sm font-medium">Área de Membros exclusiva</p>
+</div>
+<!-- Login Form -->
+<form class="space-y-6">
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-300 text-sm font-medium px-1">E-mail</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-xl">mail</span>
+<input class="w-full bg-slate-900/50 border border-slate-700 focus:border-primary focus:ring-1 focus:ring-primary rounded-lg py-3.5 pl-12 pr-4 text-slate-100 placeholder:text-slate-600 transition-all outline-none" placeholder="seu@email.com" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center px-1">
+<label class="text-slate-300 text-sm font-medium">Senha</label>
+<a class="text-primary text-xs font-semibold hover:underline decoration-primary/50" href="#">Esqueci minha senha</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-xl">lock</span>
+<input class="w-full bg-slate-900/50 border border-slate-700 focus:border-primary focus:ring-1 focus:ring-primary rounded-lg py-3.5 pl-12 pr-12 text-slate-100 placeholder:text-slate-600 transition-all outline-none" placeholder="Sua senha secreta" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me (Optional styling enhancer) -->
+<div class="flex items-center gap-2 px-1">
+<input class="rounded border-slate-700 bg-slate-900 text-primary focus:ring-primary focus:ring-offset-background-dark" id="remember" type="checkbox"/>
+<label class="text-slate-400 text-xs" for="remember">Lembrar de mim</label>
+</div>
+<!-- Login Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-[0_4px_20px_rgba(13,162,231,0.4)] transition-all active:scale-[0.98] flex items-center justify-center gap-2 uppercase tracking-wider text-sm" type="submit">
+                    Entrar
+                    <span class="material-symbols-outlined text-lg">login</span>
+</button>
+</form>
+<!-- Footer Section -->
+<div class="mt-10 pt-6 border-t border-slate-800 flex flex-col items-center gap-4">
+<p class="text-slate-500 text-xs">Não possui acesso?</p>
+<button class="text-slate-300 text-sm font-semibold hover:text-primary transition-colors flex items-center gap-1">
+                    Conhecer Planos VIP
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Security Badge -->
+<div class="mt-8 flex items-center justify-center gap-2 opacity-50 grayscale hover:grayscale-0 transition-all">
+<span class="material-symbols-outlined text-slate-400">verified_user</span>
+<span class="text-slate-400 text-[10px] uppercase tracking-widest font-bold">Ambiente Seguro &amp; Criptografado</span>
+</div>
+</div>
+</body></html>
+
+<!-- Calculadora de Gestão -->
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(13, 162, 231, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .risk-gradient {
+            background: linear-gradient(90deg, #10b981 0%, #f59e0b 50%, #ef4444 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Calculadora de Gestão</h1>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Hero/Context Card -->
+<div class="p-4">
+<div class="glass-card rounded-xl overflow-hidden shadow-lg">
+<div class="h-32 w-full bg-gradient-to-br from-primary/40 to-background-dark flex items-center justify-center relative" data-alt="Abstract blue aviation themed gradient background">
+<span class="material-symbols-outlined text-6xl text-white/50">flight_takeoff</span>
+<div class="absolute bottom-4 left-4">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-widest">Aviator Pro</span>
+</div>
+</div>
+<div class="p-4">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold">Configurações de Banca</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Ajuste os valores para calcular sua entrada e limites de ganhos de forma segura.</p>
+</div>
+</div>
+</div>
+<!-- Inputs Section -->
+<div class="px-4 space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Banca Total (R$)</span>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">R$</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="1.000,00" type="text" value="1.000,00"/>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">% de Risco</span>
+<div class="relative">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500">%</span>
+<input class="w-full px-4 py-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="2" type="text" value="2"/>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Multiplicador Alvo</span>
+<div class="relative">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500">x</span>
+<input class="w-full px-4 py-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="2.00" type="text" value="2.00"/>
+</div>
+</label>
+</div>
+</div>
+<!-- Risk Gauge -->
+<div class="p-4 mt-4">
+<div class="glass-card rounded-xl p-6 flex flex-col items-center">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-widest">Nível de Risco</span>
+<div class="w-full h-4 risk-gradient rounded-full relative mb-2">
+<!-- Marker for Risk -->
+<div class="absolute top-1/2 left-[20%] -translate-y-1/2 -translate-x-1/2 w-6 h-6 bg-white rounded-full shadow-lg border-4 border-primary ring-4 ring-primary/20"></div>
+</div>
+<div class="w-full flex justify-between text-[10px] font-bold text-slate-500 uppercase px-1">
+<span>Baixo</span>
+<span>Médio</span>
+<span>Alto</span>
+</div>
+<div class="mt-4 text-center">
+<span class="text-emerald-500 font-bold text-lg">Estratégia Conservadora</span>
+<p class="text-xs text-slate-400">Risco controlado para crescimento constante.</p>
+</div>
+</div>
+</div>
+<!-- Output Cards -->
+<div class="px-4 grid grid-cols-1 gap-3 pb-8">
+<div class="flex items-center justify-between p-5 rounded-xl bg-primary/10 border border-primary/20">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Valor da Entrada</p>
+<p class="text-lg font-bold text-slate-900 dark:text-slate-100 tracking-tight">R$ 20,00</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary">info</span>
+</div>
+<div class="flex items-center justify-between p-5 rounded-xl bg-rose-500/10 border border-rose-500/20">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-rose-500 flex items-center justify-center text-white">
+<span class="material-symbols-outlined">trending_down</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Stop Loss Diário</p>
+<p class="text-lg font-bold text-rose-500 tracking-tight">R$ 100,00</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-rose-500/50">warning</span>
+</div>
+<div class="flex items-center justify-between p-5 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-emerald-500 flex items-center justify-center text-white">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Meta (Stop Win)</p>
+<p class="text-lg font-bold text-emerald-500 tracking-tight">R$ 150,00</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-emerald-500/50">verified</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 pb-6 pt-3 z-20">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-slate-400 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">show_chart</span>
+<span class="text-[10px] font-semibold uppercase tracking-wider">Sinais</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">smart_toy</span>
+<span class="text-[10px] font-semibold uppercase tracking-wider">Robôs</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<div class="bg-primary/20 p-2 rounded-xl mb-[-4px]">
+<span class="material-symbols-outlined fill-1">calculate</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider">Gestão</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">person</span>
+<span class="text-[10px] font-semibold uppercase tracking-wider">Perfil</span>
+</a>
+</div>
+</nav>
+</body></html>
+
+<!-- Ranking da Comunidade -->
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                        "card-dark": "#16252d",
+                        "accent-gold": "#FFD700",
+                        "accent-silver": "#C0C0C0",
+                        "accent-bronze": "#CD7F32",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Aviator Pro - Ranking</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-4">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Ranking da Comunidade</h1>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">search</span>
+</button>
+</div>
+</header>
+<main class="flex-1 w-full max-w-md mx-auto px-4 pb-24">
+<!-- Tabs -->
+<div class="flex border-b border-slate-200 dark:border-slate-800 mb-6">
+<button class="flex-1 py-3 text-sm font-bold border-b-2 border-primary text-primary">Semanal</button>
+<button class="flex-1 py-3 text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Mensal</button>
+<button class="flex-1 py-3 text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Geral</button>
+</div>
+<!-- Podium Section -->
+<div class="flex items-end justify-center gap-4 mb-8 pt-8">
+<!-- 2nd Place -->
+<div class="flex flex-col items-center gap-2">
+<div class="relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-accent-silver">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1">workspace_premium</span>
+</div>
+<div class="size-16 rounded-full border-4 border-accent-silver overflow-hidden p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="Avatar de um competidor masculino" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmTBeY8sm7zHy_hLjq4H_ZfQZqvarY6YA0Sn4-xxaKrhR1zxgPyp9xsixcFaobfOv_G6Jg47DvmfTQqWwGpjHXUyd16CCskurVk_GE36_wE67kNt2VWRy1M7IJ3qD_cNXAZGGI2th0rOH3-gGTyZA6NDClKfCvb4xoR9waBj-B9x8rz7K6klZeBY2gTKB2Xz60nN_qMXnzVPRah8tGhd-7qnJ8kg0UP1URDccjI26xNkDvekFPr99Z7TEmII71FpLUWuOs7seyKBo7"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-accent-silver text-background-dark text-[10px] font-black px-2 py-0.5 rounded-full">2º</div>
+</div>
+<div class="text-center">
+<p class="text-xs font-bold truncate w-20">Ricardo M.</p>
+<p class="text-primary text-[11px] font-black">R$ 12.200</p>
+</div>
+</div>
+<!-- 1st Place -->
+<div class="flex flex-col items-center gap-2 -translate-y-4">
+<div class="relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-accent-gold">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">star</span>
+</div>
+<div class="size-24 rounded-full border-4 border-accent-gold overflow-hidden p-1 shadow-[0_0_20px_rgba(255,215,0,0.3)]">
+<img class="w-full h-full rounded-full object-cover" data-alt="Avatar de uma competidora feminina de destaque" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi3tNJ4FunuuU1Eb38Y-Us40cfV4JgE8LHskZI_sVK2SFyE5AY7xArUQX-ZjBg6PkNzRg17oQZLQEgsmbfIxIyyOMAqjOnJro_k8YqiR27k94CcNnlL3jDjGLIvpA1tpJh1bpXjdD9c2KLiIjMjAWDrtzjBujZU1fXwlWPnzX30lEFE-owVfyfPfCSPKezCDmp3waZvbfgosiaPdaHuY5HkUKHU3TzjvzNk40PNAEtujKc6jtAGkVmeAyU7BOr-YfqOHIJWU-gdg-0"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-accent-gold text-background-dark text-xs font-black px-3 py-1 rounded-full shadow-lg">1º</div>
+</div>
+<div class="text-center">
+<p class="text-sm font-black truncate w-24">Ana Luiza</p>
+<p class="text-primary text-sm font-black">R$ 15.400</p>
+</div>
+</div>
+<!-- 3rd Place -->
+<div class="flex flex-col items-center gap-2">
+<div class="relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-accent-bronze">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1">workspace_premium</span>
+</div>
+<div class="size-16 rounded-full border-4 border-accent-bronze overflow-hidden p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="Avatar de um competidor sorridente" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS2T4d-rv1Ljsawt1lyWZygXwC9ugX3lDwTVh-T6LdeA9XmRGNMt7uE7eNo2C2skW8qmWSBuP6hltEY4Xq-dVb7nBat1bpgU-KhcsvXQa2JZy6xCGl5pBzQsmhQw-HPlmlmXjTeEqGpjiS4-MKYpHq3mUgvY1iNF8omyr69JHX7s5AWm2YjXPV1trASrNAEnOuqexFDErtLBrfCd-uk3wSS0pI-8IyUveJgexJ-VbylWgOdobMc1rwiIXVf6s9sOZ5tgQ3J1w-rrSP"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-accent-bronze text-background-dark text-[10px] font-black px-2 py-0.5 rounded-full">3º</div>
+</div>
+<div class="text-center">
+<p class="text-xs font-bold truncate w-20">Gabriel S.</p>
+<p class="text-primary text-[11px] font-black">R$ 9.800</p>
+</div>
+</div>
+</div>
+<!-- Ranking List -->
+<div class="bg-card-dark rounded-xl overflow-hidden border border-slate-800">
+<div class="grid grid-cols-12 px-4 py-3 bg-slate-800/50 text-[10px] uppercase font-bold tracking-widest text-slate-500">
+<div class="col-span-2">Pos</div>
+<div class="col-span-6">Membro</div>
+<div class="col-span-4 text-right">Lucro Semanal</div>
+</div>
+<!-- List Item 4 -->
+<div class="grid grid-cols-12 items-center px-4 py-4 border-b border-slate-800/50 hover:bg-primary/5 transition-colors">
+<div class="col-span-2 text-sm font-bold text-slate-400">#4</div>
+<div class="col-span-6 flex items-center gap-3">
+<img class="size-10 rounded-full bg-slate-800" data-alt="Avatar de um usuário comum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnvjmAiNDd5YfkiqbGUHUC122wpDuvz3KKj-2FDaWE_hdXkt216ocD6BqMvssMQYjeoNXXiLpnJgIFiz0mFVASfPxw6XtA5I-f_nyR7eFLw3feUxMRfux8Vi41tPRV5M9L_JSiP_0bcTKtWFkamFP8DbXfyVwv_5FAtblkCTB6EeTzI6CxLAtkLWYxHzxIGqElhQnjbOpYscMRWMGgijGCD7IIGJsQ1oC4Bns5NXuftk4hxkgYc9oE9KaEA1X2DXh-4YihDIi7-ROu"/>
+<div>
+<p class="text-sm font-bold">Felipe Costa</p>
+<div class="flex gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1">verified</span>
+<span class="material-symbols-outlined text-[14px] text-accent-gold" style="font-variation-settings: 'FILL' 1">bolt</span>
+</div>
+</div>
+</div>
+<div class="col-span-4 text-right">
+<p class="text-sm font-black text-slate-100">R$ 7.250</p>
+</div>
+</div>
+<!-- List Item 5 -->
+<div class="grid grid-cols-12 items-center px-4 py-4 border-b border-slate-800/50 hover:bg-primary/5 transition-colors">
+<div class="col-span-2 text-sm font-bold text-slate-400">#5</div>
+<div class="col-span-6 flex items-center gap-3">
+<img class="size-10 rounded-full bg-slate-800" data-alt="Avatar de um usuário comum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVHgC3PGlkQCflxPYyREvMEA8QwuQzED2czFcQjJMZhk0H_D5P-Ktd_NsvwWDiISZK6z7Z-DNrkhOidAW3AiPyqyXbf4SZ1U20z1uNhcM51mKXEdsRGrfUhGesO6DNXEE0pr1jUldT6Sv5GlJ27ShuqK9ODRTdgtpZfcGTEiqALL_NzJdJY1AvaSGutUFsGlQ_Oofpc9mRVpRXDjeXzf2BtfTcLbVJILpNaoCn3RzANDa3QsyhUA19PcEqM0TOmsVZHjrinOf-_w9v"/>
+<div>
+<p class="text-sm font-bold">Beatriz Lima</p>
+<div class="flex gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1">verified</span>
+</div>
+</div>
+</div>
+<div class="col-span-4 text-right">
+<p class="text-sm font-black text-slate-100">R$ 6.800</p>
+</div>
+</div>
+<!-- List Item 6 -->
+<div class="grid grid-cols-12 items-center px-4 py-4 border-b border-slate-800/50 hover:bg-primary/5 transition-colors">
+<div class="col-span-2 text-sm font-bold text-slate-400">#6</div>
+<div class="col-span-6 flex items-center gap-3">
+<img class="size-10 rounded-full bg-slate-800" data-alt="Avatar de um usuário comum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdd7mwOz_8TtkBvyzRQkCcfQ4HBs3sL_ODHIa5u5AWeXVyPnTKhuSyfxw5BNYEMv464F96TmKry2Xwq-ZhyGMV_bB-idBv-czhvn6LiWKslpHmHIOrmmZBkEXiEQFqv1eIv57wGcpXYq76e7KIcRPXsIUJ3MGYpafKmIbsb3DMcSA42NxfmpSG6EJV9EI7tvM4jJiECQ6ywIoH4i7-av3SYXWltd-8OQUKWqXAJsFDfFQx2vHtjDWU8yPyJsOaPkg626ImDadkLk4P"/>
+<div>
+<p class="text-sm font-bold">Marcos O.</p>
+<div class="flex gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1">rocket_launch</span>
+</div>
+</div>
+</div>
+<div class="col-span-4 text-right">
+<p class="text-sm font-black text-slate-100">R$ 5.920</p>
+</div>
+</div>
+<!-- List Item 7 -->
+<div class="grid grid-cols-12 items-center px-4 py-4 border-b border-slate-800/50 hover:bg-primary/5 transition-colors">
+<div class="col-span-2 text-sm font-bold text-slate-400">#7</div>
+<div class="col-span-6 flex items-center gap-3">
+<img class="size-10 rounded-full bg-slate-800" data-alt="Avatar de um usuário comum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLc_0RtA4kLVT_ZPI57OPf1yIDS_BbKnNxNJH8LTr_xR_oAm3A5dzz62op_LzC0-IPZwkk07gwoshc9aHSvCr9D_WRsu9I0llGfZYt4Ki9YMuUPsGPKyZvyMrvRQxQOEFgsOm_UnhYP5MN69oE1F_FUK7vEkZnb4ip1Sp-mkUO7c5PtSYiuiHa06GJcVpdYcwjnisZJ5kyzxgE9dVWTlutlKJ9_i0bGeaSQn8OKh2QGtdUVvqbazCE9mGik6PkhW2L__jcGMWfWkwG"/>
+<div>
+<p class="text-sm font-bold">Julia Paiva</p>
+<div class="flex gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1">military_tech</span>
+</div>
+</div>
+</div>
+<div class="col-span-4 text-right">
+<p class="text-sm font-black text-slate-100">R$ 5.100</p>
+</div>
+</div>
+<!-- User Specific Rank (Sticky or Fixed Footer context) -->
+<div class="bg-primary/10 border-t-2 border-primary/40 px-4 py-4">
+<div class="grid grid-cols-12 items-center">
+<div class="col-span-2 text-sm font-black text-primary">#142</div>
+<div class="col-span-6 flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">VOCÊ</div>
+<div>
+<p class="text-sm font-bold">Seu Perfil</p>
+<p class="text-[10px] text-slate-400">Suba 12 posições p/ prêmio</p>
+</div>
+</div>
+<div class="col-span-4 text-right">
+<p class="text-sm font-black text-primary">R$ 1.240</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-card-dark border-t border-slate-200 dark:border-slate-800 px-6 py-2 pb-6 z-50">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">trophy</span>
+<span class="text-[10px] font-bold">Ranking</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">navigation</span>
+<span class="text-[10px] font-medium">Sinais</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</a>
+</div>
+</nav>
+</body></html>
+
+<!-- Histórico de Evolução -->
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aviator Pro - Histórico de Evolução</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-gradient {
+            background: linear-gradient(180deg, rgba(13, 162, 231, 0.2) 0%, rgba(13, 162, 231, 0) 100%);
+        }
+        .neon-line {
+            filter: drop-shadow(0 0 4px rgba(13, 162, 231, 0.6));
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between p-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Histórico de Evolução</h1>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">calendar_month</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Balance Summary Card -->
+<div class="p-4">
+<div class="bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-5">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-1">Evolução do Saldo</p>
+<div class="flex items-baseline gap-2">
+<h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">R$ 12.450,00</h2>
+<span class="text-emerald-500 text-sm font-bold flex items-center">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+                        15.4%
+                    </span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-500 mt-1 italic">Baseado nos últimos 30 dias</p>
+<!-- Neon Chart -->
+<div class="mt-8 relative h-48 w-full">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 150">
+<defs>
+<lineargradient id="chartFill" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#0da2e7" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#0da2e7" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Area Fill -->
+<path d="M0,120 Q50,110 80,80 T160,90 T240,40 T320,60 T400,20 V150 H0 Z" fill="url(#chartFill)"></path>
+<!-- Neon Line -->
+<path class="neon-line" d="M0,120 Q50,110 80,80 T160,90 T240,40 T320,60 T400,20" fill="none" stroke="#0da2e7" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<!-- X-Axis Labels -->
+<div class="flex justify-between mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+<span>01 Out</span>
+<span>10 Out</span>
+<span>20 Out</span>
+<span>30 Out</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Transactions List -->
+<div class="px-4 mt-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-sm font-bold uppercase tracking-wider text-slate-500">Transações Recentes</h3>
+<button class="text-primary text-xs font-bold">Ver Tudo</button>
+</div>
+<div class="space-y-3">
+<!-- Transaction Item 1 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-10 rounded-full bg-emerald-500/10 text-emerald-500">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white leading-none">Estratégia Momentum</p>
+<p class="text-xs text-slate-500 mt-1">30 Out, 14:20 • Lucro</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-emerald-500">+ R$ 250,00</p>
+</div>
+</div>
+<!-- Transaction Item 2 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-10 rounded-full bg-red-500/10 text-red-500">
+<span class="material-symbols-outlined">trending_down</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white leading-none">Análise de Tendência</p>
+<p class="text-xs text-slate-500 mt-1">29 Out, 11:05 • Prejuízo</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-red-500">- R$ 120,00</p>
+</div>
+</div>
+<!-- Transaction Item 3 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-10 rounded-full bg-emerald-500/10 text-emerald-500">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white leading-none">Padronagem 2.0</p>
+<p class="text-xs text-slate-500 mt-1">28 Out, 21:45 • Lucro</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-emerald-500">+ R$ 415,00</p>
+</div>
+</div>
+<!-- Transaction Item 4 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-10 rounded-full bg-emerald-500/10 text-emerald-500">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white leading-none">Estratégia Momentum</p>
+<p class="text-xs text-slate-500 mt-1">28 Out, 09:12 • Lucro</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-emerald-500">+ R$ 85,00</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pb-safe-area">
+<div class="flex items-center justify-around h-16">
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Início</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-[10px] font-medium">Gráficos</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">history</span>
+<span class="text-[10px] font-medium">Histórico</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</a>
+</div>
+</nav>
+</body></html>
+
+<!-- Boas-vindas Aviator Pro -->
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aviator Pro - Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Slide 1: Welcome -->
+<div class="relative flex h-screen w-full flex-col overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- Top Bar -->
+<div class="flex items-center p-6 justify-between z-10">
+<h2 class="text-primary text-xl font-extrabold tracking-tight">Aviator Pro</h2>
+<button class="text-slate-500 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors">Pular</button>
+</div>
+<!-- Content Area -->
+<div class="flex-1 flex flex-col justify-center px-6">
+<div class="@container w-full max-w-md mx-auto">
+<div class="relative group">
+<!-- Hero Image/Illustration Area -->
+<div class="aspect-square w-full rounded-xl overflow-hidden bg-gradient-to-br from-primary/20 to-background-dark border border-primary/10 flex items-center justify-center shadow-2xl shadow-primary/10" data-alt="Modern cockpit interior with glowing blue interfaces and flight controls" style="background-image: linear-gradient(135deg, rgba(13, 162, 231, 0.1) 0%, rgba(16, 28, 34, 0.8) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDpnhlzmxQ0nzo9_zLmaiMK6VdRZ9ld-uj1tqyUF1X9UCMVJMdJ5r2e9C7i57XmsfmePf6LQvkr-q0OTrPylJefy7qcqUnUZ_C1yllPlUHmbIobMhtz1V3t6ZfRsXTBA0EWK8H0SrtUQvvz57aPoqczekvLwqr5OHSe8DNgpitDFwKHZsnU1OAtYR-K2bbKY8bAFnVo-edpPKuDMJttF8iTNHzVCt3il4ZOhTQ7loSiJJzoOfwF9vnKhomRYkQQaT3Fg1_u9uwYi54');">
+<span class="material-symbols-outlined text-primary text-8xl opacity-80">flight_takeoff</span>
+</div>
+</div>
+<!-- Text Content -->
+<div class="mt-12 text-center">
+<h1 class="text-slate-900 dark:text-white text-4xl font-extrabold leading-tight tracking-tight mb-4">
+                        Bem-vindo ao <span class="text-primary">Cockpit</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-medium leading-relaxed">
+                        Sua jornada para o sucesso nos investimentos começa aqui com tecnologia de ponta e análise em tempo real.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Bottom Controls -->
+<div class="p-6 flex flex-col items-center gap-8 mb-4">
+<!-- Pagination Dots -->
+<div class="flex gap-2">
+<div class="h-2 w-8 rounded-full bg-primary transition-all"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+<!-- Primary Action -->
+<button class="w-full max-w-md bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all active:scale-95">
+                Próximo
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Hidden Slide 2 (Conceptual Representation) -->
+<!-- 
+    <div class="mt-20 px-6 border-t border-primary/10 pt-20 opacity-30 grayscale">
+        <div class="text-center">
+            <div class="aspect-square w-full max-w-md mx-auto rounded-xl bg-gradient-to-tr from-primary/30 to-background-dark mb-10 flex items-center justify-center" 
+                 data-alt="Dynamic financial data charts and upward moving signals">
+                <span class="material-symbols-outlined text-primary text-8xl">trending_up</span>
+            </div>
+            <h1 class="text-white text-3xl font-bold mb-4">Sinais de Alta Assertividade</h1>
+            <p class="text-slate-400">Nossa IA processa milhares de dados para entregar as melhores oportunidades de voo.</p>
+        </div>
+    </div> 
+    -->
+<!-- Hidden Slide 3 (Conceptual Representation) -->
+<!-- 
+    <div class="mt-20 px-6 border-t border-primary/10 pt-20 opacity-30 grayscale">
+        <div class="text-center">
+            <div class="aspect-square w-full max-w-md mx-auto rounded-xl bg-gradient-to-b from-primary/40 to-background-dark mb-10 flex items-center justify-center" 
+                 data-alt="Airplane taking off into a blue digital sky">
+                <span class="material-symbols-outlined text-primary text-8xl">rocket_launch</span>
+            </div>
+            <h1 class="text-white text-3xl font-bold mb-4">Decole Agora!</h1>
+            <p class="text-slate-400">Prepare-se para atingir novos patamares. O céu não é o limite para seus lucros.</p>
+        </div>
+    </div> 
+    -->
+</body></html>
+
+<!-- Perfil VIP Ouro -->
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Perfil VIP - Aviator Pro</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Meu Perfil</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex size-12 cursor-pointer items-center justify-center rounded-xl bg-transparent text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+<!-- Profile Section -->
+<div class="flex p-6 @container">
+<div class="flex w-full flex-col gap-6 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 border-4 border-primary/30" data-alt="Foto de perfil do usuário premium sorrindo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGSB-BO0DM4JUjqCyEOktng9RqR8K4exCxAGTohNzmDWRzjNb2m6RoY9yYCMSKzwK8QgtynUziZ2xzoP7ZzmsE9SwnWYTJcPoE-LcMWt0Tbf-GPMWF0XzP0OLjquB2yyoPjX-_ZTt2qWDFFuzR2XpM_PlZnBoJgkhXkD7xxUhO8O546F74LZHPGBuv5se-MWbfcaFhxOcwKt2VQDRXRsHlNZ4TjrvCzn5lb75oxlA39ICy8XcLgL9yzHYT8oNc8EjMbTArHsTPHh9I");'>
+</div>
+<div class="absolute bottom-0 right-0 bg-primary text-white p-1.5 rounded-full border-4 border-background-dark">
+<span class="material-symbols-outlined text-sm block">verified</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-[-0.015em] text-center">João Silva</p>
+<p class="text-primary text-base font-semibold leading-normal text-center">Membro VIP Aviator Pro</p>
+</div>
+</div>
+<!-- Level Badge -->
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 dark:bg-primary/20 border border-primary/30 px-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">diamond</span>
+<p class="text-primary text-sm font-bold uppercase tracking-wider">Nível Diamante</p>
+</div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 gap-4 p-4">
+<div class="flex flex-col gap-2 rounded-xl p-5 bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Taxa de Acerto</p>
+<p class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight">87%</p>
+<p class="text-emerald-500 text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">trending_up</span> +5.2%
+                </p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-5 bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Sinais Seguidos</p>
+<p class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight">1.240</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium italic">Este mês</p>
+</div>
+<div class="flex flex-col gap-4 rounded-2xl p-6 bg-gradient-to-br from-slate-100 to-white dark:from-slate-800/80 dark:to-slate-900/80 border-2 border-[#D4AF37]/50 shadow-[0_0_20px_rgba(212,175,55,0.15)] col-span-2 lg:col-span-2">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-[#D4AF37] text-xs font-bold uppercase tracking-[0.2em] mb-1">Lucro Simulado Total</p>
+<p class="text-slate-900 dark:text-white tracking-tight text-4xl font-black leading-tight">R$ 4.500,00</p>
+</div>
+<div class="size-12 rounded-full bg-gradient-to-tr from-[#BF953F] via-[#FCF6BA] to-[#B38728] flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-background-dark font-bold">auto_awesome</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-[#D4AF37]/10 w-fit px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-sm text-[#D4AF37]" style="font-variation-settings: 'FILL' 1">trending_up</span>
+<p class="text-[#D4AF37] text-sm font-bold">+12% acumulado este mês</p>
+</div>
+</div>
+</div>
+<!-- Settings List -->
+<div class="flex flex-col p-4 gap-2 mb-20">
+<h3 class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest px-2 mb-2">Configurações</h3>
+<a class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-800/30 hover:bg-slate-200 dark:hover:bg-slate-800/60 rounded-xl transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<span class="font-medium text-slate-700 dark:text-slate-200">Dados Pessoais</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-800/30 hover:bg-slate-200 dark:hover:bg-slate-800/60 rounded-xl transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">card_membership</span>
+</div>
+<span class="font-medium text-slate-700 dark:text-slate-200">Minha Assinatura</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-emerald-500 bg-emerald-500/10 px-2 py-1 rounded">ATIVO</span>
+<span class="material-symbols-outlined text-slate-400 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-800/30 hover:bg-slate-200 dark:hover:bg-slate-800/60 rounded-xl transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<span class="font-medium text-slate-700 dark:text-slate-200">Notificações</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<button class="flex items-center justify-between p-4 bg-rose-500/5 hover:bg-rose-500/10 rounded-xl transition-colors group mt-4">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-rose-500/10 flex items-center justify-center text-rose-500">
+<span class="material-symbols-outlined">logout</span>
+</div>
+<span class="font-bold text-rose-500">Sair da Conta</span>
+</div>
+</button>
+</div>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 z-50 flex gap-2 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark/95 backdrop-blur-md px-4 pb-6 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">bolt</span>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Sinais</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Gráficos</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">workspace_premium</span>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">VIP</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">person</span>
+<p class="text-xs font-bold leading-normal tracking-[0.015em]">Perfil</p>
+</a>
+</div>
+</div>
+</body></html>
+
+<!-- Área de Aulas Gratuita -->
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Área de Aulas - Aviator Pro Members</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-header {
+            background: rgba(16, 28, 34, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header -->
+<header class="sticky top-0 z-50 glass-header px-4 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+<div>
+<h1 class="text-lg font-bold leading-tight">Aviator Pro Members</h1>
+<p class="text-xs text-slate-400">Área de Membros • 100% Gratuito</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-full hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<main class="max-w-2xl mx-auto p-4 space-y-6">
+<!-- Global Progress -->
+<section class="bg-slate-800/40 border border-slate-700/50 p-5 rounded-xl">
+<div class="flex justify-between items-end mb-3">
+<div>
+<h2 class="text-sm font-medium text-slate-400">Seu Progresso Geral</h2>
+<p class="text-2xl font-bold text-primary">65% <span class="text-sm font-normal text-slate-500">concluído</span></p>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">emoji_events</span>
+</div>
+<div class="w-full bg-slate-700 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 65%"></div>
+</div>
+<p class="text-xs text-slate-400 mt-3 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">info</span>
+                Continue assim! Você está quase no nível Intermediário.
+            </p>
+</section>
+<!-- Level 1: Iniciante -->
+<div class="space-y-3">
+<div class="glass-header border-l-4 border-green-500 p-4 rounded-lg flex items-center justify-between cursor-pointer">
+<div class="flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-wider font-bold text-green-500">Nível 1</span>
+<h3 class="font-bold text-lg">Iniciante</h3>
+<div class="flex items-center gap-2">
+<div class="w-24 bg-slate-700 rounded-full h-1.5">
+<div class="bg-green-500 h-1.5 rounded-full" style="width: 100%"></div>
+</div>
+<span class="text-xs text-green-500 font-medium">100%</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</div>
+<!-- Modules Level 1 -->
+<div class="grid gap-3">
+<div class="bg-slate-800/30 border border-slate-700/30 p-3 rounded-lg flex gap-4 items-center">
+<div class="relative w-24 h-16 shrink-0 rounded-md overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Dashboard financeiro com gráficos verdes e azuis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0gOIM3AyCDswnFVI7GjiFkxwwiCzeHEh6ezB6d5EF1EyHR_4SBgNuSzQl3lM3d1nZUtY8GLg5TygfLs3DSolFr-Trd2EW-5UF7dNOAYhncnqwiHi4-rll2hjriVsW5SOPRseQzwdKgpRmTvy05fZXlbczv3jNCVg8rE8dxfqHu-pzsrNztJJsxvl3tqbZEf_7q57B0z1idWGP2N6lebPWXeNDmMay8hL51MlHXi2yD4gsjuIqGaEZDEE8u1pgiibvgp4TJYRF4bKc"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm">play_circle</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold leading-tight">1.1 Introdução ao Aviator</h4>
+<span class="material-symbols-outlined text-green-500 text-sm" style="font-variation-settings: 'FILL' 1">check_circle</span>
+</div>
+<p class="text-[10px] text-slate-500 mt-1">Duração: 05:20 • Módulo 1</p>
+</div>
+</div>
+<div class="bg-slate-800/30 border border-slate-700/30 p-3 rounded-lg flex gap-4 items-center">
+<div class="relative w-24 h-16 shrink-0 rounded-md overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Gráfico de candles subindo em fundo escuro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJkABxG3nPALOZ5fNBX_t5QYKQc4cOzZYO-UIO9OAtECtvder1jDTge-onOLvnwLW8yauZuMRH77U4OIrS5cyvSzV4Kd-ThImjo7Xv8cdzjuHVrCM0lZN3Ot4p8ElxVoIt67dQrcvVb4En37_dg-2ZiIHgIYsNdb4Lc-ixYzDIRo02Y0yQZr2TOlm4oFZ1FN8oKbU8DX4XQoXVGTQ_Smz1NjDrp8DtrKGVAjOPAMoCBbS-Rdmw2hpcOWoyzE1YHiw_KlmY_y6tXHEM"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm">play_circle</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold leading-tight">1.2 Criando sua Conta</h4>
+<span class="material-symbols-outlined text-green-500 text-sm" style="font-variation-settings: 'FILL' 1">check_circle</span>
+</div>
+<p class="text-[10px] text-slate-500 mt-1">Duração: 08:45 • Módulo 1</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Level 2: Básico -->
+<div class="space-y-3">
+<div class="glass-header border-l-4 border-primary p-4 rounded-lg flex items-center justify-between cursor-pointer">
+<div class="flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-wider font-bold text-primary">Nível 2</span>
+<h3 class="font-bold text-lg">Básico</h3>
+<div class="flex items-center gap-2">
+<div class="w-24 bg-slate-700 rounded-full h-1.5">
+<div class="bg-primary h-1.5 rounded-full" style="width: 45%"></div>
+</div>
+<span class="text-xs text-primary font-medium">45%</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_less</span>
+</div>
+<div class="grid gap-3">
+<div class="bg-slate-800/30 border border-slate-700/30 p-3 rounded-lg flex gap-4 items-center">
+<div class="relative w-24 h-16 shrink-0 rounded-md overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Fundo tecnológico abstrato com linhas conectadas azuis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgam6P_zONYBeX921TAcTy5wdc9S_lESQdapbTL1lsnrmobz5zwh2KCOhW2XnJqknJ5oFMuFqbxvugAmpRoXssFv3jtU2MBO2HqAdeXfLYzBodnvH1UC-SoN2L9Nj473LI_opc9FZxhMY688yjf5WhmwA_Z_Cp2QxZ6E5Y3wSLMW8u86H6sARoggrwBWtLZ5jRIbz4ZwfI4YNxc5l3iAChZ1-9yrUNe8kFhslF6GaaSXL0EEacAtW6w67FFUtXijGEF0PQtqSSyhqO"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm">play_circle</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold leading-tight">2.1 Gestão de Banca 101</h4>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1">check_circle</span>
+</div>
+<p class="text-[10px] text-slate-500 mt-1">Duração: 12:10 • Módulo 2</p>
+</div>
+</div>
+<div class="bg-slate-800/60 border-2 border-primary/50 p-3 rounded-lg flex gap-4 items-center ring-1 ring-primary/20">
+<div class="relative w-24 h-16 shrink-0 rounded-md overflow-hidden border border-primary/30">
+<img class="w-full h-full object-cover" data-alt="Gráficos estatísticos em tela de computador" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm4D2NuNNSvCfdRsISts0ElIL4Chp-Z4sg5hBR_S9gNBUH3Bv-Y_p85z0Yuu6TJoefMwPYFW9Ma2Qh9ASz33VHtmlTiHWTaADnYFuDt8s1ZWpuxwoptamEkyq4UARWSllOD37ftTXCd1ovuwGP568J5U9P_LhPhBD8pAadb4iypGC_mdXwNnnQCb3gtFrK_8x6uRory05wPZUpuD8-1JarGm3WT1hY3cIQ3s0_fP4gUt72bdg0HbUtgg710sneWEFnge_pmjzh8-QP"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg animate-pulse">play_circle</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold leading-tight text-white">2.2 Analisando o Histórico</h4>
+<span class="px-2 py-0.5 rounded text-[8px] bg-primary text-white font-bold uppercase">Assistindo</span>
+</div>
+<p class="text-[10px] text-slate-400 mt-1">Duração: 15:30 • Módulo 2</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Level 3: Intermediário -->
+<div class="space-y-3 opacity-60 grayscale-[0.5]">
+<div class="glass-header border-l-4 border-amber-500 p-4 rounded-lg flex items-center justify-between cursor-pointer">
+<div class="flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-wider font-bold text-amber-500">Nível 3</span>
+<h3 class="font-bold text-lg text-amber-500/90">Intermediário</h3>
+<div class="flex items-center gap-2">
+<div class="w-24 bg-slate-700 rounded-full h-1.5">
+<div class="bg-amber-500 h-1.5 rounded-full" style="width: 0%"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">Bloqueado</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">lock</span>
+</div>
+<p class="text-[10px] text-center text-slate-500">Conclua o Nível 2 para liberar estas aulas.</p>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-dark/95 backdrop-blur-md border-t border-slate-800 px-4 pb-6 pt-2 flex justify-around items-center z-50">
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Início</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">play_circle</span>
+<span class="text-[10px] font-medium">Aulas</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span class="text-[10px] font-medium">Comunidade</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">person_outline</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</a>
+</nav>
+</body></html>
+
+<!-- Estratégias & Vídeos -->
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Aviator Pro Members - Estratégias</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">menu</span>
+<h1 class="text-lg font-bold tracking-tight">Estratégias</h1>
+</div>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+<!-- Tabs -->
+<div class="flex px-4 gap-6 overflow-x-auto no-scrollbar">
+<a class="flex flex-col items-center pt-2 pb-3 border-b-2 border-primary text-primary" href="#">
+<span class="text-sm font-bold">Todas</span>
+</a>
+<a class="flex flex-col items-center pt-2 pb-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="text-sm font-bold">Conservadoras</span>
+</a>
+<a class="flex flex-col items-center pt-2 pb-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="text-sm font-bold">Agressivas</span>
+</a>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 p-4 space-y-6 max-w-2xl mx-auto w-full">
+<!-- Strategy Card 1 -->
+<div class="bg-white dark:bg-slate-900/50 rounded-xl overflow-hidden shadow-sm border-l-4 border-primary">
+<div class="p-4 space-y-4">
+<!-- Card Header -->
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-block px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-wider rounded">Iniciante</span>
+<h2 class="text-lg font-bold mt-1">Estratégia 2.0x Automático</h2>
+</div>
+<span class="material-symbols-outlined text-slate-400">info</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Focada em consistência a longo prazo com baixo risco de quebra de banca. Ideal para quem está começando agora.
+                </p>
+<!-- Video Preview -->
+<div class="relative group cursor-pointer aspect-video rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-800">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="Aviator game interface showing growing multiplier" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtvj3CahqGDDG3Sdd58TY9wG0TMjxQmmzWDLzv_453AmvOP0W8kD6ZDaA2MVQpj1NHmHyu9Xxixabm2UjSjB5H5hdcfcpfRvNXmnTwgVoNJIUbl5VuooZ22EHdJ_nUhJGTi82PkeX65hoh0GfpIBgfu0QsMHBZpwR_de9V8DuL7gvJoW7aFnaeQaNCa07GrqYh5Y5Ev-Q4J9EQClrcqrJDBPUIFvRozbeWU_YBKtD3k_fZczNXdS7QzUAHY7Kd1Cy70ALXnDKmlUAT')"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20">
+<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/40 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl fill-1">play_arrow</span>
+</div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 gap-2 border-t border-slate-100 dark:border-slate-800 pt-4">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Condição de Entrada</span>
+<span class="font-medium">Após 2 velas baixas</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Multiplicador Alvo</span>
+<span class="font-medium text-primary">2.00x</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Banca Recomendada</span>
+<span class="font-medium">1-2% / entrada</span>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                    Ver Estratégia Completa
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Strategy Card 2 -->
+<div class="bg-white dark:bg-slate-900/50 rounded-xl overflow-hidden shadow-sm border-l-4 border-primary">
+<div class="p-4 space-y-4">
+<!-- Card Header -->
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-block px-2 py-0.5 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 text-[10px] font-bold uppercase tracking-wider rounded">Intermediário</span>
+<h2 class="text-lg font-bold mt-1">Padrão Sequencial Triplo</h2>
+</div>
+<span class="material-symbols-outlined text-slate-400">info</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Utiliza análise de padrões de cores repetidas para identificar o momento exato de velas rosas.
+                </p>
+<!-- Video Preview -->
+<div class="relative group cursor-pointer aspect-video rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-800">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="Cyberpunk digital grid background pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCK3pf76MlfiRVmftkBrqi0IpW9EIMfxW0d71dmvkeDgx7j92fTHK1pAK9cABVEW1Ouvznq2Err0hrMal_ONL-4ECDBbdCb-QnGEBITmOa0gSQmuRM00pkK90n5h8NwlSePzRivbTaRqr7CUEgWK0OX00QSAQ6hj4HnA3TAq4NzwvVqqYDxY9DbZv0yCsUN6Vl9rNF4QWvaIhOUUBEz4Xw0D5xWLVNyu7wjMKxBpO-iGzMUIAQkqvMlBvxzJkXcSoI9gcVJ8Ghpv-0x')"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20">
+<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/40 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl fill-1">play_arrow</span>
+</div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 gap-2 border-t border-slate-100 dark:border-slate-800 pt-4">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Condição de Entrada</span>
+<span class="font-medium">3 azuis consecutivas</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Multiplicador Alvo</span>
+<span class="font-medium text-primary">5.00x</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Banca Recomendada</span>
+<span class="font-medium">0.5% / entrada</span>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                    Ver Estratégia Completa
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="sticky bottom-0 bg-white dark:bg-[#1b2327] border-t border-slate-200 dark:border-[#283439] px-4 pb-6 pt-2 flex justify-around">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-[#9cb0ba]" href="#">
+<span class="material-symbols-outlined">bolt</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Sinais</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">query_stats</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Estratégias</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-[#9cb0ba]" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Histórico</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-[#9cb0ba]" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Perfil</span>
+</a>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</body></html>
+
+<!-- Sinais em Tempo Real (Live) -->
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aviator Pro Members</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0EA5E9",
+                        "accent-green": "#00FF88",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0A0A0F",
+                        "card-dark": "#161B22",
+                    },
+                    fontFamily: {
+                        "display": ["Sora", "Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-glow {
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+        }
+        .neon-border {
+            border: 1px solid rgba(14, 165, 233, 0.5);
+            box-shadow: inset 0 0 10px rgba(14, 165, 233, 0.2);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #0EA5E9, #00FF88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        body {
+            background-color: #0A0A0F;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display text-slate-100 min-h-screen flex flex-col max-w-md mx-auto bg-background-dark border-x border-slate-800/50">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-3">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-accent-green rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+<div class="relative size-10 rounded-full bg-cover bg-center border-2 border-primary/20" data-alt="Avatar do usuário com borda neon azul" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbWhI3XzUmtuBtlikrvFo9QasUlOBZdfVAJUESfKEdeWBATs7pkr3qa0U1RTKOIQggKtPWgBmU9HpYS-UoDHkl8nGoojvsLGEtUOYX1db-3gUPN2GlkyuQwTGUHKM7JOB9kG42oteWFoAlM8VoJ-Jx7GI_voX-5R3wS-LLDfVMeAs3xDrdJLUpjyEBfI6qyAyKGSOP4LxI_-ReOv2n3562daiqPighaxrQ3atuUfTS3CwiUqbJqAt6-9cQCK0izVXz3xnst5DpewA3')"></div>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold">Membro Pro</span>
+<h1 class="text-lg font-extrabold leading-tight tracking-tight">Aviator Pro</h1>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="relative p-2 rounded-full bg-slate-800/50 hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-accent-green rounded-full shadow-[0_0_8px_#00FF88]"></span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto px-6 pb-24 space-y-6">
+<!-- Hero Section: Banca -->
+<section class="relative mt-2 p-6 rounded-2xl overflow-hidden glass glass-glow group">
+<!-- Hero Gradient Background -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-transparent -z-10"></div>
+<div class="absolute -top-12 -right-12 size-48 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="flex justify-between items-start mb-4">
+<p class="text-slate-400 text-sm font-medium">Banca Atual</p>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent-green/10 text-accent-green text-xs font-bold border border-accent-green/20">
+<span class="material-symbols-outlined text-xs leading-none">trending_up</span>
+                    +15.4%
+                </div>
+</div>
+<h2 class="text-4xl font-extrabold tracking-tight mb-6 text-gradient">R$ 12.450,00</h2>
+<!-- Sparkline Placeholder -->
+<div class="w-full h-12 flex items-end gap-1 mb-2 opacity-60">
+<div class="flex-1 bg-primary/20 rounded-t h-[40%]" data-alt="Gráfico de variação 7 dias"></div>
+<div class="flex-1 bg-primary/20 rounded-t h-[30%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t h-[55%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t h-[45%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t h-[70%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t h-[60%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t h-[85%] border-t-2 border-primary"></div>
+</div>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Variação nos últimos 7 dias</p>
+</section>
+<!-- Signal Status -->
+<section class="relative">
+<div class="absolute -inset-0.5 bg-gradient-to-r from-red-500/20 to-primary/20 rounded-2xl blur opacity-30"></div>
+<div class="relative flex items-center justify-between p-5 rounded-2xl bg-card-dark border border-slate-800">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center justify-center size-12 rounded-xl bg-slate-800/80">
+<span class="material-symbols-outlined text-primary text-2xl">flight_takeoff</span>
+</div>
+<div>
+<p class="text-white font-bold text-base">Sinal Ativo</p>
+<p class="text-slate-400 text-xs">Aguardando Próximo Voo</p>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-red-500/10 border border-red-500/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+</span>
+<span class="text-red-500 text-[10px] font-black uppercase tracking-widest">AO VIVO</span>
+</div>
+</div>
+</section>
+<!-- Quick Access Grid -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Card 1: Aulas -->
+<div class="group relative p-5 rounded-2xl glass hover:bg-white/5 transition-all duration-300">
+<div class="mb-4 size-10 rounded-lg flex items-center justify-center bg-primary/10 neon-border">
+<span class="material-symbols-outlined text-primary">school</span>
+</div>
+<h3 class="text-white font-bold text-sm mb-1">Aulas</h3>
+<p class="text-slate-500 text-[10px]">Aprenda as estratégias</p>
+</div>
+<!-- Card 2: Sinais -->
+<div class="group relative p-5 rounded-2xl glass hover:bg-white/5 transition-all duration-300">
+<div class="mb-4 size-10 rounded-lg flex items-center justify-center bg-primary/10 neon-border">
+<span class="material-symbols-outlined text-primary">sensors</span>
+</div>
+<h3 class="text-white font-bold text-sm mb-1">Sinais</h3>
+<p class="text-slate-500 text-[10px]">Alertas em tempo real</p>
+</div>
+<!-- Card 3: Calculadora -->
+<div class="group relative p-5 rounded-2xl glass hover:bg-white/5 transition-all duration-300">
+<div class="mb-4 size-10 rounded-lg flex items-center justify-center bg-primary/10 neon-border">
+<span class="material-symbols-outlined text-primary">calculate</span>
+</div>
+<h3 class="text-white font-bold text-sm mb-1">Calculadora</h3>
+<p class="text-slate-500 text-[10px]">Gerencie sua gestão</p>
+</div>
+<!-- Card 4: Ranking -->
+<div class="group relative p-5 rounded-2xl glass hover:bg-white/5 transition-all duration-300">
+<div class="mb-4 size-10 rounded-lg flex items-center justify-center bg-primary/10 neon-border">
+<span class="material-symbols-outlined text-primary">leaderboard</span>
+</div>
+<h3 class="text-white font-bold text-sm mb-1">Ranking</h3>
+<p class="text-slate-500 text-[10px]">Top membros da semana</p>
+</div>
+</section>
+<!-- Expert Tip Banner -->
+<section class="p-5 rounded-2xl bg-gradient-to-r from-primary to-blue-700 relative overflow-hidden">
+<div class="absolute right-0 top-0 h-full w-1/3 opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-9xl -rotate-12 translate-x-10 translate-y-4">lightbulb</span>
+</div>
+<div class="relative z-10 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-sm">tips_and_updates</span>
+<span class="text-white text-[10px] font-black uppercase tracking-widest opacity-80">Dica do Especialista</span>
+</div>
+<p class="text-white font-semibold text-sm leading-relaxed">
+                    "Mantenha sua gestão de 2% ao dia. A paciência é a melhor estratégia para lucros constantes."
+                </p>
+</div>
+</section>
+</main>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto border-t border-slate-800 bg-background-dark/95 backdrop-blur-xl px-4 py-2 z-50">
+<div class="flex justify-between items-center h-16">
+<a class="flex flex-col items-center justify-center gap-1 flex-1 relative group" href="#">
+<div class="absolute -top-1 w-8 h-1 bg-primary rounded-full shadow-[0_0_12px_#0EA5E9]"></div>
+<span class="material-symbols-outlined text-primary fill-1">home</span>
+<span class="text-[10px] font-bold text-primary">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 flex-1 text-slate-500 hover:text-slate-300 transition-colors" href="#">
+<span class="material-symbols-outlined">video_library</span>
+<span class="text-[10px] font-medium">Aulas</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 flex-1 text-slate-500 hover:text-slate-300 transition-colors" href="#">
+<div class="relative flex items-center justify-center -top-6 size-12 rounded-2xl bg-primary shadow-lg shadow-primary/30 border-4 border-background-dark">
+<span class="material-symbols-outlined text-white text-2xl">sensors</span>
+</div>
+<span class="text-[10px] font-medium -mt-5">Sinais</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 flex-1 text-slate-500 hover:text-slate-300 transition-colors" href="#">
+<span class="material-symbols-outlined">calculate</span>
+<span class="text-[10px] font-medium">Calc</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 flex-1 text-slate-500 hover:text-slate-300 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</a>
+</div>
+</nav>
+</body></html>

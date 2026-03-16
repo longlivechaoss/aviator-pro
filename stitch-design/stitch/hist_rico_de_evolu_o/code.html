@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aviator Pro - Histórico de Evolução</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-gradient {
+            background: linear-gradient(180deg, rgba(13, 162, 231, 0.2) 0%, rgba(13, 162, 231, 0) 100%);
+        }
+        .neon-line {
+            filter: drop-shadow(0 0 4px rgba(13, 162, 231, 0.6));
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between p-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Histórico de Evolução</h1>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">calendar_month</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Balance Summary Card -->
+<div class="p-4">
+<div class="bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-5">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-1">Evolução do Saldo</p>
+<div class="flex items-baseline gap-2">
+<h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">R$ 12.450,00</h2>
+<span class="text-emerald-500 text-sm font-bold flex items-center">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+                        15.4%
+                    </span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-500 mt-1 italic">Baseado nos últimos 30 dias</p>
+<!-- Neon Chart -->
+<div class="mt-8 relative h-48 w-full">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 150">
+<defs>
+<lineargradient id="chartFill" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#0da2e7" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#0da2e7" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Area Fill -->
+<path d="M0,120 Q50,110 80,80 T160,90 T240,40 T320,60 T400,20 V150 H0 Z" fill="url(#chartFill)"></path>
+<!-- Neon Line -->
+<path class="neon-line" d="M0,120 Q50,110 80,80 T160,90 T240,40 T320,60 T400,20" fill="none" stroke="#0da2e7" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<!-- X-Axis Labels -->
+<div class="flex justify-between mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+<span>01 Out</span>
+<span>10 Out</span>
+<span>20 Out</span>
+<span>30 Out</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Transactions List -->
+<div class="px-4 mt-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-sm font-bold uppercase tracking-wider text-slate-500">Transações Recentes</h3>
+<button class="text-primary text-xs font-bold">Ver Tudo</button>
+</div>
+<div class="space-y-3">
+<!-- Transaction Item 1 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-10 rounded-full bg-emerald-500/10 text-emerald-500">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white leading-none">Estratégia Momentum</p>
+<p class="text-xs text-slate-500 mt-1">30 Out, 14:20 • Lucro</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-emerald-500">+ R$ 250,00</p>
+</div>
+</div>
+<!-- Transaction Item 2 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-10 rounded-full bg-red-500/10 text-red-500">
+<span class="material-symbols-outlined">trending_down</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white leading-none">Análise de Tendência</p>
+<p class="text-xs text-slate-500 mt-1">29 Out, 11:05 • Prejuízo</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-red-500">- R$ 120,00</p>
+</div>
+</div>
+<!-- Transaction Item 3 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-10 rounded-full bg-emerald-500/10 text-emerald-500">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white leading-none">Padronagem 2.0</p>
+<p class="text-xs text-slate-500 mt-1">28 Out, 21:45 • Lucro</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-emerald-500">+ R$ 415,00</p>
+</div>
+</div>
+<!-- Transaction Item 4 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-10 rounded-full bg-emerald-500/10 text-emerald-500">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white leading-none">Estratégia Momentum</p>
+<p class="text-xs text-slate-500 mt-1">28 Out, 09:12 • Lucro</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-emerald-500">+ R$ 85,00</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pb-safe-area">
+<div class="flex items-center justify-around h-16">
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Início</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-[10px] font-medium">Gráficos</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">history</span>
+<span class="text-[10px] font-medium">Histórico</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</a>
+</div>
+</nav>
+</body></html>

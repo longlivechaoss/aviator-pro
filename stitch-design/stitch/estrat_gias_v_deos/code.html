@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Aviator Pro Members - Estratégias</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">menu</span>
+<h1 class="text-lg font-bold tracking-tight">Estratégias</h1>
+</div>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+<!-- Tabs -->
+<div class="flex px-4 gap-6 overflow-x-auto no-scrollbar">
+<a class="flex flex-col items-center pt-2 pb-3 border-b-2 border-primary text-primary" href="#">
+<span class="text-sm font-bold">Todas</span>
+</a>
+<a class="flex flex-col items-center pt-2 pb-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="text-sm font-bold">Conservadoras</span>
+</a>
+<a class="flex flex-col items-center pt-2 pb-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="text-sm font-bold">Agressivas</span>
+</a>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 p-4 space-y-6 max-w-2xl mx-auto w-full">
+<!-- Strategy Card 1 -->
+<div class="bg-white dark:bg-slate-900/50 rounded-xl overflow-hidden shadow-sm border-l-4 border-primary">
+<div class="p-4 space-y-4">
+<!-- Card Header -->
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-block px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-wider rounded">Iniciante</span>
+<h2 class="text-lg font-bold mt-1">Estratégia 2.0x Automático</h2>
+</div>
+<span class="material-symbols-outlined text-slate-400">info</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Focada em consistência a longo prazo com baixo risco de quebra de banca. Ideal para quem está começando agora.
+                </p>
+<!-- Video Preview -->
+<div class="relative group cursor-pointer aspect-video rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-800">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="Aviator game interface showing growing multiplier" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtvj3CahqGDDG3Sdd58TY9wG0TMjxQmmzWDLzv_453AmvOP0W8kD6ZDaA2MVQpj1NHmHyu9Xxixabm2UjSjB5H5hdcfcpfRvNXmnTwgVoNJIUbl5VuooZ22EHdJ_nUhJGTi82PkeX65hoh0GfpIBgfu0QsMHBZpwR_de9V8DuL7gvJoW7aFnaeQaNCa07GrqYh5Y5Ev-Q4J9EQClrcqrJDBPUIFvRozbeWU_YBKtD3k_fZczNXdS7QzUAHY7Kd1Cy70ALXnDKmlUAT')"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20">
+<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/40 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl fill-1">play_arrow</span>
+</div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 gap-2 border-t border-slate-100 dark:border-slate-800 pt-4">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Condição de Entrada</span>
+<span class="font-medium">Após 2 velas baixas</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Multiplicador Alvo</span>
+<span class="font-medium text-primary">2.00x</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Banca Recomendada</span>
+<span class="font-medium">1-2% / entrada</span>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                    Ver Estratégia Completa
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Strategy Card 2 -->
+<div class="bg-white dark:bg-slate-900/50 rounded-xl overflow-hidden shadow-sm border-l-4 border-primary">
+<div class="p-4 space-y-4">
+<!-- Card Header -->
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-block px-2 py-0.5 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 text-[10px] font-bold uppercase tracking-wider rounded">Intermediário</span>
+<h2 class="text-lg font-bold mt-1">Padrão Sequencial Triplo</h2>
+</div>
+<span class="material-symbols-outlined text-slate-400">info</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Utiliza análise de padrões de cores repetidas para identificar o momento exato de velas rosas.
+                </p>
+<!-- Video Preview -->
+<div class="relative group cursor-pointer aspect-video rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-800">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="Cyberpunk digital grid background pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCK3pf76MlfiRVmftkBrqi0IpW9EIMfxW0d71dmvkeDgx7j92fTHK1pAK9cABVEW1Ouvznq2Err0hrMal_ONL-4ECDBbdCb-QnGEBITmOa0gSQmuRM00pkK90n5h8NwlSePzRivbTaRqr7CUEgWK0OX00QSAQ6hj4HnA3TAq4NzwvVqqYDxY9DbZv0yCsUN6Vl9rNF4QWvaIhOUUBEz4Xw0D5xWLVNyu7wjMKxBpO-iGzMUIAQkqvMlBvxzJkXcSoI9gcVJ8Ghpv-0x')"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20">
+<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/40 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl fill-1">play_arrow</span>
+</div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 gap-2 border-t border-slate-100 dark:border-slate-800 pt-4">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Condição de Entrada</span>
+<span class="font-medium">3 azuis consecutivas</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Multiplicador Alvo</span>
+<span class="font-medium text-primary">5.00x</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Banca Recomendada</span>
+<span class="font-medium">0.5% / entrada</span>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                    Ver Estratégia Completa
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="sticky bottom-0 bg-white dark:bg-[#1b2327] border-t border-slate-200 dark:border-[#283439] px-4 pb-6 pt-2 flex justify-around">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-[#9cb0ba]" href="#">
+<span class="material-symbols-outlined">bolt</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Sinais</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">query_stats</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Estratégias</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-[#9cb0ba]" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Histórico</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-[#9cb0ba]" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Perfil</span>
+</a>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</body></html>

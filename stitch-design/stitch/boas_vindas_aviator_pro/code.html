@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aviator Pro - Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Slide 1: Welcome -->
+<div class="relative flex h-screen w-full flex-col overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- Top Bar -->
+<div class="flex items-center p-6 justify-between z-10">
+<h2 class="text-primary text-xl font-extrabold tracking-tight">Aviator Pro</h2>
+<button class="text-slate-500 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors">Pular</button>
+</div>
+<!-- Content Area -->
+<div class="flex-1 flex flex-col justify-center px-6">
+<div class="@container w-full max-w-md mx-auto">
+<div class="relative group">
+<!-- Hero Image/Illustration Area -->
+<div class="aspect-square w-full rounded-xl overflow-hidden bg-gradient-to-br from-primary/20 to-background-dark border border-primary/10 flex items-center justify-center shadow-2xl shadow-primary/10" data-alt="Modern cockpit interior with glowing blue interfaces and flight controls" style="background-image: linear-gradient(135deg, rgba(13, 162, 231, 0.1) 0%, rgba(16, 28, 34, 0.8) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDpnhlzmxQ0nzo9_zLmaiMK6VdRZ9ld-uj1tqyUF1X9UCMVJMdJ5r2e9C7i57XmsfmePf6LQvkr-q0OTrPylJefy7qcqUnUZ_C1yllPlUHmbIobMhtz1V3t6ZfRsXTBA0EWK8H0SrtUQvvz57aPoqczekvLwqr5OHSe8DNgpitDFwKHZsnU1OAtYR-K2bbKY8bAFnVo-edpPKuDMJttF8iTNHzVCt3il4ZOhTQ7loSiJJzoOfwF9vnKhomRYkQQaT3Fg1_u9uwYi54');">
+<span class="material-symbols-outlined text-primary text-8xl opacity-80">flight_takeoff</span>
+</div>
+</div>
+<!-- Text Content -->
+<div class="mt-12 text-center">
+<h1 class="text-slate-900 dark:text-white text-4xl font-extrabold leading-tight tracking-tight mb-4">
+                        Bem-vindo ao <span class="text-primary">Cockpit</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-medium leading-relaxed">
+                        Sua jornada para o sucesso nos investimentos começa aqui com tecnologia de ponta e análise em tempo real.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Bottom Controls -->
+<div class="p-6 flex flex-col items-center gap-8 mb-4">
+<!-- Pagination Dots -->
+<div class="flex gap-2">
+<div class="h-2 w-8 rounded-full bg-primary transition-all"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+<!-- Primary Action -->
+<button class="w-full max-w-md bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all active:scale-95">
+                Próximo
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Hidden Slide 2 (Conceptual Representation) -->
+<!-- 
+    <div class="mt-20 px-6 border-t border-primary/10 pt-20 opacity-30 grayscale">
+        <div class="text-center">
+            <div class="aspect-square w-full max-w-md mx-auto rounded-xl bg-gradient-to-tr from-primary/30 to-background-dark mb-10 flex items-center justify-center" 
+                 data-alt="Dynamic financial data charts and upward moving signals">
+                <span class="material-symbols-outlined text-primary text-8xl">trending_up</span>
+            </div>
+            <h1 class="text-white text-3xl font-bold mb-4">Sinais de Alta Assertividade</h1>
+            <p class="text-slate-400">Nossa IA processa milhares de dados para entregar as melhores oportunidades de voo.</p>
+        </div>
+    </div> 
+    -->
+<!-- Hidden Slide 3 (Conceptual Representation) -->
+<!-- 
+    <div class="mt-20 px-6 border-t border-primary/10 pt-20 opacity-30 grayscale">
+        <div class="text-center">
+            <div class="aspect-square w-full max-w-md mx-auto rounded-xl bg-gradient-to-b from-primary/40 to-background-dark mb-10 flex items-center justify-center" 
+                 data-alt="Airplane taking off into a blue digital sky">
+                <span class="material-symbols-outlined text-primary text-8xl">rocket_launch</span>
+            </div>
+            <h1 class="text-white text-3xl font-bold mb-4">Decole Agora!</h1>
+            <p class="text-slate-400">Prepare-se para atingir novos patamares. O céu não é o limite para seus lucros.</p>
+        </div>
+    </div> 
+    -->
+</body></html>

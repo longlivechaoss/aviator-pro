@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0A0A0F",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .bg-mesh {
+            background-image: radial-gradient(at 0% 0%, rgba(13, 162, 231, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(13, 162, 231, 0.1) 0px, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex items-center justify-center p-4 bg-mesh">
+<div class="relative w-full max-w-[440px]">
+<!-- Decorative Glow -->
+<div class="absolute -top-20 -left-20 w-64 h-64 bg-primary/20 rounded-full blur-[80px]"></div>
+<div class="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+<!-- Login Card -->
+<div class="glass-card rounded-xl p-8 shadow-2xl relative z-10">
+<!-- Header/Logo Area -->
+<div class="flex flex-col items-center mb-8">
+<div class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mb-4 ring-1 ring-primary/50 shadow-[0_0_20px_rgba(13,162,231,0.3)]">
+<span class="material-symbols-outlined text-primary text-5xl">flight_takeoff</span>
+</div>
+<h2 class="text-2xl font-bold tracking-tight text-slate-100 mb-1">Aviator Pro Members</h2>
+<p class="text-slate-400 text-sm font-medium">Área de Membros exclusiva</p>
+</div>
+<!-- Login Form -->
+<form class="space-y-6">
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-300 text-sm font-medium px-1">E-mail</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-xl">mail</span>
+<input class="w-full bg-slate-900/50 border border-slate-700 focus:border-primary focus:ring-1 focus:ring-primary rounded-lg py-3.5 pl-12 pr-4 text-slate-100 placeholder:text-slate-600 transition-all outline-none" placeholder="seu@email.com" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center px-1">
+<label class="text-slate-300 text-sm font-medium">Senha</label>
+<a class="text-primary text-xs font-semibold hover:underline decoration-primary/50" href="#">Esqueci minha senha</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-xl">lock</span>
+<input class="w-full bg-slate-900/50 border border-slate-700 focus:border-primary focus:ring-1 focus:ring-primary rounded-lg py-3.5 pl-12 pr-12 text-slate-100 placeholder:text-slate-600 transition-all outline-none" placeholder="Sua senha secreta" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me (Optional styling enhancer) -->
+<div class="flex items-center gap-2 px-1">
+<input class="rounded border-slate-700 bg-slate-900 text-primary focus:ring-primary focus:ring-offset-background-dark" id="remember" type="checkbox"/>
+<label class="text-slate-400 text-xs" for="remember">Lembrar de mim</label>
+</div>
+<!-- Login Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-[0_4px_20px_rgba(13,162,231,0.4)] transition-all active:scale-[0.98] flex items-center justify-center gap-2 uppercase tracking-wider text-sm" type="submit">
+                    Entrar
+                    <span class="material-symbols-outlined text-lg">login</span>
+</button>
+</form>
+<!-- Footer Section -->
+<div class="mt-10 pt-6 border-t border-slate-800 flex flex-col items-center gap-4">
+<p class="text-slate-500 text-xs">Não possui acesso?</p>
+<button class="text-slate-300 text-sm font-semibold hover:text-primary transition-colors flex items-center gap-1">
+                    Conhecer Planos VIP
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Security Badge -->
+<div class="mt-8 flex items-center justify-center gap-2 opacity-50 grayscale hover:grayscale-0 transition-all">
+<span class="material-symbols-outlined text-slate-400">verified_user</span>
+<span class="text-slate-400 text-[10px] uppercase tracking-widest font-bold">Ambiente Seguro &amp; Criptografado</span>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da2e7",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                        "card-dark": "#16252d",
+                        "accent-gold": "#FFD700",
+                        "accent-silver": "#C0C0C0",
+                        "accent-bronze": "#CD7F32",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Aviator Pro - Ranking</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-4">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Ranking da Comunidade</h1>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">search</span>
+</button>
+</div>
+</header>
+<main class="flex-1 w-full max-w-md mx-auto px-4 pb-24">
+<!-- Tabs -->
+<div class="flex border-b border-slate-200 dark:border-slate-800 mb-6">
+<button class="flex-1 py-3 text-sm font-bold border-b-2 border-primary text-primary">Semanal</button>
+<button class="flex-1 py-3 text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Mensal</button>
+<button class="flex-1 py-3 text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Geral</button>
+</div>
+<!-- Podium Section -->
+<div class="flex items-end justify-center gap-4 mb-8 pt-8">
+<!-- 2nd Place -->
+<div class="flex flex-col items-center gap-2">
+<div class="relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-accent-silver">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1">workspace_premium</span>
+</div>
+<div class="size-16 rounded-full border-4 border-accent-silver overflow-hidden p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="Avatar de um competidor masculino" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmTBeY8sm7zHy_hLjq4H_ZfQZqvarY6YA0Sn4-xxaKrhR1zxgPyp9xsixcFaobfOv_G6Jg47DvmfTQqWwGpjHXUyd16CCskurVk_GE36_wE67kNt2VWRy1M7IJ3qD_cNXAZGGI2th0rOH3-gGTyZA6NDClKfCvb4xoR9waBj-B9x8rz7K6klZeBY2gTKB2Xz60nN_qMXnzVPRah8tGhd-7qnJ8kg0UP1URDccjI26xNkDvekFPr99Z7TEmII71FpLUWuOs7seyKBo7"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-accent-silver text-background-dark text-[10px] font-black px-2 py-0.5 rounded-full">2º</div>
+</div>
+<div class="text-center">
+<p class="text-xs font-bold truncate w-20">Ricardo M.</p>
+<p class="text-primary text-[11px] font-black">R$ 12.200</p>
+</div>
+</div>
+<!-- 1st Place -->
+<div class="flex flex-col items-center gap-2 -translate-y-4">
+<div class="relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-accent-gold">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">star</span>
+</div>
+<div class="size-24 rounded-full border-4 border-accent-gold overflow-hidden p-1 shadow-[0_0_20px_rgba(255,215,0,0.3)]">
+<img class="w-full h-full rounded-full object-cover" data-alt="Avatar de uma competidora feminina de destaque" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi3tNJ4FunuuU1Eb38Y-Us40cfV4JgE8LHskZI_sVK2SFyE5AY7xArUQX-ZjBg6PkNzRg17oQZLQEgsmbfIxIyyOMAqjOnJro_k8YqiR27k94CcNnlL3jDjGLIvpA1tpJh1bpXjdD9c2KLiIjMjAWDrtzjBujZU1fXwlWPnzX30lEFE-owVfyfPfCSPKezCDmp3waZvbfgosiaPdaHuY5HkUKHU3TzjvzNk40PNAEtujKc6jtAGkVmeAyU7BOr-YfqOHIJWU-gdg-0"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-accent-gold text-background-dark text-xs font-black px-3 py-1 rounded-full shadow-lg">1º</div>
+</div>
+<div class="text-center">
+<p class="text-sm font-black truncate w-24">Ana Luiza</p>
+<p class="text-primary text-sm font-black">R$ 15.400</p>
+</div>
+</div>
+<!-- 3rd Place -->
+<div class="flex flex-col items-center gap-2">
+<div class="relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-accent-bronze">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1">workspace_premium</span>
+</div>
+<div class="size-16 rounded-full border-4 border-accent-bronze overflow-hidden p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="Avatar de um competidor sorridente" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS2T4d-rv1Ljsawt1lyWZygXwC9ugX3lDwTVh-T6LdeA9XmRGNMt7uE7eNo2C2skW8qmWSBuP6hltEY4Xq-dVb7nBat1bpgU-KhcsvXQa2JZy6xCGl5pBzQsmhQw-HPlmlmXjTeEqGpjiS4-MKYpHq3mUgvY1iNF8omyr69JHX7s5AWm2YjXPV1trASrNAEnOuqexFDErtLBrfCd-uk3wSS0pI-8IyUveJgexJ-VbylWgOdobMc1rwiIXVf6s9sOZ5tgQ3J1w-rrSP"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-accent-bronze text-background-dark text-[10px] font-black px-2 py-0.5 rounded-full">3º</div>
+</div>
+<div class="text-center">
+<p class="text-xs font-bold truncate w-20">Gabriel S.</p>
+<p class="text-primary text-[11px] font-black">R$ 9.800</p>
+</div>
+</div>
+</div>
+<!-- Ranking List -->
+<div class="bg-card-dark rounded-xl overflow-hidden border border-slate-800">
+<div class="grid grid-cols-12 px-4 py-3 bg-slate-800/50 text-[10px] uppercase font-bold tracking-widest text-slate-500">
+<div class="col-span-2">Pos</div>
+<div class="col-span-6">Membro</div>
+<div class="col-span-4 text-right">Lucro Semanal</div>
+</div>
+<!-- List Item 4 -->
+<div class="grid grid-cols-12 items-center px-4 py-4 border-b border-slate-800/50 hover:bg-primary/5 transition-colors">
+<div class="col-span-2 text-sm font-bold text-slate-400">#4</div>
+<div class="col-span-6 flex items-center gap-3">
+<img class="size-10 rounded-full bg-slate-800" data-alt="Avatar de um usuário comum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnvjmAiNDd5YfkiqbGUHUC122wpDuvz3KKj-2FDaWE_hdXkt216ocD6BqMvssMQYjeoNXXiLpnJgIFiz0mFVASfPxw6XtA5I-f_nyR7eFLw3feUxMRfux8Vi41tPRV5M9L_JSiP_0bcTKtWFkamFP8DbXfyVwv_5FAtblkCTB6EeTzI6CxLAtkLWYxHzxIGqElhQnjbOpYscMRWMGgijGCD7IIGJsQ1oC4Bns5NXuftk4hxkgYc9oE9KaEA1X2DXh-4YihDIi7-ROu"/>
+<div>
+<p class="text-sm font-bold">Felipe Costa</p>
+<div class="flex gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1">verified</span>
+<span class="material-symbols-outlined text-[14px] text-accent-gold" style="font-variation-settings: 'FILL' 1">bolt</span>
+</div>
+</div>
+</div>
+<div class="col-span-4 text-right">
+<p class="text-sm font-black text-slate-100">R$ 7.250</p>
+</div>
+</div>
+<!-- List Item 5 -->
+<div class="grid grid-cols-12 items-center px-4 py-4 border-b border-slate-800/50 hover:bg-primary/5 transition-colors">
+<div class="col-span-2 text-sm font-bold text-slate-400">#5</div>
+<div class="col-span-6 flex items-center gap-3">
+<img class="size-10 rounded-full bg-slate-800" data-alt="Avatar de um usuário comum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVHgC3PGlkQCflxPYyREvMEA8QwuQzED2czFcQjJMZhk0H_D5P-Ktd_NsvwWDiISZK6z7Z-DNrkhOidAW3AiPyqyXbf4SZ1U20z1uNhcM51mKXEdsRGrfUhGesO6DNXEE0pr1jUldT6Sv5GlJ27ShuqK9ODRTdgtpZfcGTEiqALL_NzJdJY1AvaSGutUFsGlQ_Oofpc9mRVpRXDjeXzf2BtfTcLbVJILpNaoCn3RzANDa3QsyhUA19PcEqM0TOmsVZHjrinOf-_w9v"/>
+<div>
+<p class="text-sm font-bold">Beatriz Lima</p>
+<div class="flex gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1">verified</span>
+</div>
+</div>
+</div>
+<div class="col-span-4 text-right">
+<p class="text-sm font-black text-slate-100">R$ 6.800</p>
+</div>
+</div>
+<!-- List Item 6 -->
+<div class="grid grid-cols-12 items-center px-4 py-4 border-b border-slate-800/50 hover:bg-primary/5 transition-colors">
+<div class="col-span-2 text-sm font-bold text-slate-400">#6</div>
+<div class="col-span-6 flex items-center gap-3">
+<img class="size-10 rounded-full bg-slate-800" data-alt="Avatar de um usuário comum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdd7mwOz_8TtkBvyzRQkCcfQ4HBs3sL_ODHIa5u5AWeXVyPnTKhuSyfxw5BNYEMv464F96TmKry2Xwq-ZhyGMV_bB-idBv-czhvn6LiWKslpHmHIOrmmZBkEXiEQFqv1eIv57wGcpXYq76e7KIcRPXsIUJ3MGYpafKmIbsb3DMcSA42NxfmpSG6EJV9EI7tvM4jJiECQ6ywIoH4i7-av3SYXWltd-8OQUKWqXAJsFDfFQx2vHtjDWU8yPyJsOaPkg626ImDadkLk4P"/>
+<div>
+<p class="text-sm font-bold">Marcos O.</p>
+<div class="flex gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1">rocket_launch</span>
+</div>
+</div>
+</div>
+<div class="col-span-4 text-right">
+<p class="text-sm font-black text-slate-100">R$ 5.920</p>
+</div>
+</div>
+<!-- List Item 7 -->
+<div class="grid grid-cols-12 items-center px-4 py-4 border-b border-slate-800/50 hover:bg-primary/5 transition-colors">
+<div class="col-span-2 text-sm font-bold text-slate-400">#7</div>
+<div class="col-span-6 flex items-center gap-3">
+<img class="size-10 rounded-full bg-slate-800" data-alt="Avatar de um usuário comum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLc_0RtA4kLVT_ZPI57OPf1yIDS_BbKnNxNJH8LTr_xR_oAm3A5dzz62op_LzC0-IPZwkk07gwoshc9aHSvCr9D_WRsu9I0llGfZYt4Ki9YMuUPsGPKyZvyMrvRQxQOEFgsOm_UnhYP5MN69oE1F_FUK7vEkZnb4ip1Sp-mkUO7c5PtSYiuiHa06GJcVpdYcwjnisZJ5kyzxgE9dVWTlutlKJ9_i0bGeaSQn8OKh2QGtdUVvqbazCE9mGik6PkhW2L__jcGMWfWkwG"/>
+<div>
+<p class="text-sm font-bold">Julia Paiva</p>
+<div class="flex gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1">military_tech</span>
+</div>
+</div>
+</div>
+<div class="col-span-4 text-right">
+<p class="text-sm font-black text-slate-100">R$ 5.100</p>
+</div>
+</div>
+<!-- User Specific Rank (Sticky or Fixed Footer context) -->
+<div class="bg-primary/10 border-t-2 border-primary/40 px-4 py-4">
+<div class="grid grid-cols-12 items-center">
+<div class="col-span-2 text-sm font-black text-primary">#142</div>
+<div class="col-span-6 flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">VOCÊ</div>
+<div>
+<p class="text-sm font-bold">Seu Perfil</p>
+<p class="text-[10px] text-slate-400">Suba 12 posições p/ prêmio</p>
+</div>
+</div>
+<div class="col-span-4 text-right">
+<p class="text-sm font-black text-primary">R$ 1.240</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-card-dark border-t border-slate-200 dark:border-slate-800 px-6 py-2 pb-6 z-50">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">trophy</span>
+<span class="text-[10px] font-bold">Ranking</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">navigation</span>
+<span class="text-[10px] font-medium">Sinais</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</a>
+</div>
+</nav>
+</body></html>
