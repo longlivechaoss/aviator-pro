@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import BottomNav from "./BottomNav";
 
 const AUTH_KEY = "isLoggedIn";
+const ONBOARDING_KEY = "hasSeenOnboarding";
 
 export default function AuthGuard({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -16,14 +17,21 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (!mounted) return;
-    const isLoginPage = pathname === "/login";
-    const isLoggedIn =
-      typeof window !== "undefined" && localStorage.getItem(AUTH_KEY) === "true";
+    if (!mounted || typeof window === "undefined") return;
 
+    const isLoginPage = pathname === "/login";
     const isOnboardingPage = pathname === "/onboarding";
-    if (!isLoginPage && !isOnboardingPage && !isLoggedIn) {
-      router.replace("/login");
+    const isLoggedIn = localStorage.getItem(AUTH_KEY) === "true";
+    const hasSeenOnboarding = localStorage.getItem(ONBOARDING_KEY) === "true";
+
+    if (isLoginPage || isOnboardingPage) return;
+
+    if (!isLoggedIn) {
+      if (!hasSeenOnboarding) {
+        router.replace("/onboarding");
+      } else {
+        router.replace("/login");
+      }
     }
   }, [mounted, pathname, router]);
 

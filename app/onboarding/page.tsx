@@ -47,6 +47,9 @@ export default function OnboardingPage() {
 
   const handleNext = () => {
     if (isLast) {
+      if (typeof window !== "undefined") {
+        localStorage.setItem("hasSeenOnboarding", "true");
+      }
       router.push("/login");
       return;
     }
