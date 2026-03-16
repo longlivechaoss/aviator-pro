@@ -39,7 +39,19 @@ const MENU_ITEMS = [
   },
 ] as const;
 
+const AUTH_KEY = "isLoggedIn";
+
 export default function PerfilPage() {
+  const router = useRouter();
+
+  const handleSair = () => {
+    if (typeof window !== "undefined") {
+      localStorage.removeItem(AUTH_KEY);
+      router.replace("/login");
+      router.refresh();
+    }
+  };
+
   return (
     <>
       <motion.header
